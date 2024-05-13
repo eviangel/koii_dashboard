@@ -1,6 +1,6 @@
 {
     "dependencies": {
-      "@_koi/web3.js": "0.0.7",
-      "firebase": "10.11.1"
+        "@_koi/web3.js": "^0.0.7",
+        "firebase": "10.11.1"
     }
-  }
+}

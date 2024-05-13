@@ -9,15 +9,6 @@ import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.11
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyCaZc512rXrJp2unn1Dkysgr5u60n9ifk4",
-    authDomain: "koii-dashboard.firebaseapp.com",
-    projectId: "koii-dashboard",
-    storageBucket: "koii-dashboard.appspot.com",
-    messagingSenderId: "558719626294",
-    appId: "1:558719626294:web:aec9cfefcf7ba617d37c97",
-    measurementId: "G-Z62RH9JDYW"
-  };
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
