@@ -1,0 +1,731 @@
+header {
+    width: 100%;
+    padding: 10px 20px; /* Adjust padding as needed */
+    box-sizing: border-box;
+}
+
+#siteLogo {
+    height: 50px; /* Adjust based on your preference */
+    width: auto;
+    display: block;
+    margin-top: -8%;
+    margin-left: 4%;
+}
+
+/* Ensure the logo sticks to the left */
+header img {
+    display: inline;
+}
+
+
+
+
+
+
+
+body {
+    background: rgb(3, 3, 32) url('./BG.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    padding: 0 24px;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+.strike-through
+{
+  text-decoration: line-through;
+}
+.normal-text
+{
+  display: inline-block; /* This creates a new block formatting context */
+    text-decoration: none; /* Ensures text decoration is set to none */
+    color: red;
+}
+.warning-box {
+    background-color: #ffdd57; /* Light yellow background */
+    color: #333; /* Dark text for contrast */
+    padding: 10px 20px; /* Some padding for spacing */
+    text-align: center; /* Center the text */
+    border-radius: 5px; /* Optional: rounded corners */
+    margin: 10px 0; /* Add some margin at the top and bottom */
+    font-weight: bold; /* Make the text bold */
+    
+}
+div.taskid {
+    width: 100%; /* Ensures the div takes up the full width */
+    max-width: 600px; /* Adjust this value to match your design preference */
+    margin-bottom: 20px; /* Space between input groups */
+}
+
+input[type="text"], #results {
+    width: 100%; /* Make input fields and results div take the full width of their parent */
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff; /* Ensure inputs and results have a consistent background */
+    color: #000; /* Text color for better readability */
+}
+
+.redirect-btn {
+    color: #ffffff; /* Custom color for the text/link */
+    text-decoration: none; /* Removes underline */
+    /* Other styling properties as before */
+}
+
+.redirect-btn:hover, .redirect-btn:focus {
+    color: #ffa500; /* Lighter orange on hover/focus for visual feedback */
+    text-decoration: underline; /* Optional: underline on hover/focus */
+}
+
+/* If you want a specific style for when the link is actively being clicked */
+.redirect-btn:active {
+    color: #ff4500; /* Darker shade of orange for active/clicked state */
+}
+
+#results {
+    margin-top: 20px; /* Additional spacing from the button */
+    text-align: center; /* Centers the text inside the results div */
+    /* Optionally, adjust padding and font-size as needed */
+    color: white;
+background: inherit;
+}
+#madeby {
+    margin-top: 20px; /* Additional spacing from the button */
+    color: white;
+background: inherit;
+}
+#topp {
+    color: rgb(248, 248, 248);
+    text-align: center;
+    margin-bottom: 10%;
+    font-size: large;
+}
+button#runScript {
+    cursor: pointer;
+    /* Add any additional button styling here */
+}
+/* #sidebar h3 {
+    color: #fcbe24; 
+    margin-bottom: 5px; 
+    /* cursor: default; 
+} */
+.warnings
+{
+  color: red;
+  font-weight: 400;
+}
+.redirect-button {
+    display: inline-block;
+    background-color: #ff4500; /* Red color */
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.redirect-button:hover {
+    background-color: #e03e00; /* Darker shade of red */
+}
+
+
+
+#sidebar {
+    background: linear-gradient(to bottom, #2b2f77, #1b1d44); /* Gradient background */
+    color: white;
+    
+    overflow-y: auto; /* Enables scrolling */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Adds shadow to the right edge */
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-all {
+    background: transparent;
+    color: #4b6cb7; /* Color of 'View All' link */
+    text-decoration: none;
+    padding: 5px 15px;
+    border: 1px solid #4b6cb7; /* Border color matching the link */
+    border-radius: 15px;
+}
+
+.task-list {
+    margin-bottom: 10px; /* Spacing between text items */
+    cursor: pointer; /* Change cursor on hover */
+    padding: 10px; /* Padding around text for easier clicking */
+}
+
+.task {
+    background: #353a75; /* Background color of the task */
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adding some shadow for depth */
+}
+
+.task-title {
+    font-size: 1em;
+}
+
+.task-id {
+    font-size: 0.85em;
+    color: #4b6cb7; /* Lighter color for the task ID */
+    display: block; /* Making it a block element for new line */
+}
+
+
+
+#sidebar {
+    width: 430px;
+    height: 100vh;
+    gap: 0px;
+    border-radius: 24px 24px 24px 24px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    margin-right: 64%;
+    max-height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+    margin-top: 15%;
+    padding: 12px; 
+    
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 24px; /* Adjust to your preference */
+}
+
+.view-all {
+    
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px; /* Adjust to your preference */
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task {
+   
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px; /* Spacing between tasks */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.task:hover {
+    background-color: #4C5270; /* Hover effect color */
+}
+
+.task-title {
+    display: block;
+    font-size: 18px; /* Adjust to your preference */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.task-id {
+    display: block;
+    font-size: 12px; /* Adjust to your preference */
+    color: #7B7F9E; /* Lighter text color for the ID */
+}
+
+.active{
+    background:rgb(26, 42, 166)
+    
+}
+
+
+.copy-text {
+    margin-bottom: 10px; /* Spacing between text items */
+    cursor: pointer; /* Change cursor on hover */
+    padding: 10px; /* Padding around text for easier clicking */
+}
+
+.content {
+    /*margin-left: 200px; /* Adjust based on the sidebar width */
+     margin-left: 1%; /* Adjust based on sidebar width */
+}
+
+
+
+.script-container {
+    flex-grow: 1; /* Allows the container to fill the remaining space */
+    margin-left: 430px; /* Same as the sidebar width to prevent overlap */
+    padding: 20px; /* Padding for content inside the main container */
+    background: linear-gradient(to bottom, #2b2f77, #1b1d44);
+    border-radius: 20px;
+    margin-top: 9%;
+}
+
+/* .script-container {
+    background: #2b2f77; 
+    border-radius: 20px;
+    padding: 44px;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    max-width: 800px; 
+    margin: auto;
+    position: fixed;
+} */
+
+
+
+.alert-box {
+    background-color: #ff5f57; /* Bright red/pink background */
+    color: white;
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 10px 0; /* Spacing for demonstration */
+}
+
+.alert-icon {
+    padding-right: 35px; /* Space between the icon and the text */
+    font-size: 49px; /* Larger size for the icon */
+}
+
+.alert-content p,
+.alert-content ul {
+    margin: 0; /* Remove default margin from p and ul */
+    padding: 0; /* Remove default padding from ul */
+    list-style: none; /* Remove default list style from ul */
+}
+
+.alert-content ul li::before {
+    content: "•"; /* Bullet point */
+    color: white; /* White bullet point */
+    display: inline-block; 
+    width: 1em; /* Space before bullet point */
+    margin-left: -1em; /* Negative margin to align bullet with content */
+}
+
+
+
+.button-container {
+    padding: 15px; /* Add some padding around buttons */
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-around; /* Distribute space around buttons */
+    align-items: center; /* Center-align button text vertically */
+    gap: 7%;
+}
+
+.button {
+    border: none; /* No border */
+    border-radius: 20px; /* Rounded corners */
+    padding: 17px 30px; /* Padding inside the buttons */
+    font-size: 16px; /* Text size */
+    color: white; /* Text color */
+    background: #40455a; /* Button background color */
+    cursor: pointer; /* Cursor changes to a hand icon on hover */
+    outline: none; /* Remove the outline */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.button:hover {
+    background: #535a7b; /* Lighter background color on hover */
+}
+
+.run-script {
+    margin-right: 10px; /* Space between the buttons */
+}
+
+/* Optionally add styles for specific states like hover, focus, active */
+.button:active {
+    transform: scale(0.98); /* Slightly scale down the button when clicked */
+}
+
+/* Since there's no way to infer the active state styling from the image, I've added a subtle scale effect */
+
+
+
+
+
+h1 {
+    color: #61dafb; /* Bright blue color for the header */
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+form > label {
+    display: block;
+    margin-bottom: .5em;
+}
+
+form > input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1em;
+    border: 2px solid #000; /* Border color */
+    background: #000;
+    border-radius: 10px;
+    color: #61dafb;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    color: #61dafb; /* Text color */
+    background: #353965; /* Button background color */
+    cursor: pointer;
+    flex-grow: 1; /* Buttons will grow to fill the space */
+}
+
+.info {
+    font-size: 0.8em;
+    color: #aaa; /* Lighter text color */
+    margin-bottom: 0.25em;
+}
+
+.info-command {
+    font-size: 0.9em;
+    color: #61dafb; /* Command text color */
+    background: #353965; /* Command background color */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.credit {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 0.9em;
+    color: #aaa; /* Lighter text color for credit */
+}
+.name{
+    margin-top: 20px;
+    text-align: right;
+    font-size: 0.9em;
+    color: #aaa; /* Lighter text color for credit */
+}
+
+
+.input-with-info {
+    position: relative;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    background: #1A1C2C;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.input-with-info input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    color: #fff;
+    margin-right: 10px; /* space for the info icon */
+}
+
+.info-icon {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background: #4A4E69;
+}
+
+.info-tooltip {
+    display: none;
+    text-align: left;
+    color: #fff;
+    padding: 8px;
+    position: absolute;
+    z-index: 100;
+    width: max-content;
+    bottom: 120%; /* Tooltip appears above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4A4E69;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.info-tooltip.show-tooltip {
+    display: block; 
+}
+
+.info-icon:hover .info-tooltip {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (min-width: 650px) {
+    #sidebar {
+        display: block; 
+        position: fixed;
+    left: 0;
+    top: 0;
+    width: 35%; 
+    height: 100%;
+    background: #2c3e50; 
+    color: white; 
+    padding: 20px; 
+    }
+.content {
+        margin-left: 50%; 
+    }
+ .insidetext {
+    display: block;
+    font-size: 9px;
+    }
+}
+
+
+
+
+@media (min-width: 950px) {
+    #sidebar {
+        display: block; 
+        position: fixed;
+    left: 0;
+    top: 0;
+    width: 36%; 
+    height: 100%;
+    background: #2c3e50; 
+    color: white; 
+    padding: 20px; 
+    }
+.content {
+        margin-left: 50%; 
+    }
+    .insidetext {
+
+    font-size: 82%;
+    }
+}
+
+
+@media (min-width: 1400px) {
+    #sidebar {
+        display: block; 
+        position: fixed;
+    left: 0;
+    top: 0;
+    width: 35%; 
+    height: 100%;
+    background: #2c3e50; 
+    color: white; 
+    padding: 20px; 
+    }
+.content {
+        margin-left: 38%; 
+    }
+    .insidetext {
+
+    font-size: 19px;
+    }
+} */
+
+.loading-div {
+    display: none;        
+    align-items: center;  
+    justify-content: center; 
+    font-size: 20px;      
+    color: white;         
+    /* background-color: #5555ff;  */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.loading-message {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3; 
+    border-top: 4px solid #3498db; 
+    border-radius: 50%;
+    margin-right: 10px; 
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+.task-container {
+    background-color: rgb(37, 37, 165); /* Adjust the background color as needed */
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    /* width: 500px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: none;
+    position: relative;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.rewards-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.reward-block p, .detail p {
+    font-size: 16px;
+    color: rgb(56, 176, 240);
+    font-weight: bold;
+}
+.detail p {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+}
+
+.reward-block h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.detail span {
+    font-size: 15px;
+    font-weight: normal;
+}
+.details-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.insideblock {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 14px 14px 14px 14px;
+    width: 40%;
+}
+
+.detail {
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .rewards-container, .details-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reward-block, .detail {
+        margin-bottom: 10px;
+    }
+}
+
+ul.task-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+li.task {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.close-btn {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    cursor: pointer;
+    font-size: 16px; /* Adjust size as needed, smaller font for better fit */
+    color: white; /* Standard color */
+    transition: color 0.3s, transform 0.2s; /* Smooth transition for color and transform */
+    width: 30px; /* Width of the circle */
+    height: 30px; /* Height of the circle */
+    line-height: 30px; /* Center the text vertically */
+    text-align: center; /* Center the text horizontally */
+    border-radius: 50%; /* Makes it round */
+    border: 2px solid white; /* Adds a white border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover effect */
+.close-btn:hover {
+    color: #ff4500; /* Changes color when hovered */
+    background-color: white; /* Changes background color when hovered */
+}
+
+/* Active/click effect */
+.close-btn:active {
+    transform: scale(0.9); /* Slightly scale down when clicked */
+    background-color: #ccc; /* Darker background on active */
+}
+
+.error-container {
+    color: red; /* Color for the error message */
+    padding: 20px; /* Padding for spacing */
+    margin-top: 20px; /* Space from the top or other elements */
+    border: 1px solid red; /* Optional border */
+    background-color: #fff3f3; /* Light red background for visibility */
+    text-align: center; /* Centering the content */
+}
+
+.error-container button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

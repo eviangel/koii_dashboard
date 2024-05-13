@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <title>KOII NETWORK</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <img src="src/icon.png" alt="Logo" id="siteLogo">
+</header>
+<body>
+    <div class="script-container">
+        <div class="alert-box">
+            <span class="alert-icon">&#9888;</span> <!-- This is the warning symbol -->
+            <div class="alert-content">
+                <p>Please update your VPS .env-local file:</p>
+                <ul>
+                    <li>change K2_NODE_URL to K2_NODE_URL="https://testnet.koii.network"</li>
+                    <li>Run command: koii config set --url https://testnet.koii.network/</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h1>Koii Network</h1>
+        <p>This script will check if an address has submission in task and check if it has unclaimed rewards for this task.</p>
+        <form>
+            <br />
+            <label for="taskID">Task ID:</label>
+           
+            <div class="input-with-info">
+                <input type="text" id="taskID" name="taskID" placeholder="Task ID" value="2QsiB2jdufTkt1jghMA68eZxQ4tJQb7DBWrnowx1nNeJ">
+            </div>
+
+
+            <br />
+            <br />
+            <label for="publicAddress">Your Public Address (Your stake wallet public address):</label>
+
+            <div class="input-with-info">
+                <input type="text" id="publicAddress" name="publicAddress" placeholder="Your Public Address">
+                <div class="info-icon" onclick="toggleInfo()">i
+                    <span class="info-tooltip">You can get your stake wallet address on VPS by: koii-keygen pubkey VPS-task/namespace/staking_wallet.json</span>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            <div class="button-container">
+                <button type="button" id="runScript" class="button runScript">Run Script</button>
+                <button class="button view-explorer">View in Explorer</button>
+                
+            </div>
+            <br />
+            <div id="loading" class="loading-div">
+            <div id="loadingMessage" class="loading-message"></div> 
+            loading
+        </div>
+        <div class="error-container" style="display: none;">
+            <!-- Error messages and retry button will be injected here -->
+        </div>
+            <div class="task-container">
+                <span class="close-btn" title="Close">&#x2715;</span>
+                <h2 id="taskName">NaN</h2>
+                <div class="rewards-container">
+                    <div class="reward-block insideblock">
+                        <p>Unclaimed Rewards</p>
+                        <h3 id="unclaimedRewards">NaN KOII</h3>
+                    </div>
+                    <div class="reward-block insideblock">
+                        <p>Staked Koii</p>
+                        <h3 id="stakedKoii">NaN KOII</h3>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <div class="detail">
+                        <p>Min Stake:</p>
+                        <span id="minStake">NaN KOII</span>
+                    </div>
+                    <div class="detail">
+                        <p>Nodes:</p>
+                        <span id="nodes">NaN</span>
+                    </div>
+                    <div class="detail">
+                        <p>Rounds:</p>
+                        <span id="rounds">NaN</span>
+                    </div>
+                    <div class="detail">
+                        <p>Round Time:</p>
+                        <span id="roundTime">NaN</span>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </form>
+        <div class="credit">This script was made by: <p class="myname">Pewdickpie</h1></div>
+    </div>
+    <aside id="sidebar">
+        <div class="sidebar-header">
+            <h2>Task List</h2>
+            <a href="#" class="view-all">View All</a>
+        </div>
+        <ul class="task-list">
+            <li class="task active">
+                <span class="task-title">Free Token Task!</span>
+                <span class="innerText">GbumTdsj7hcPZKGBEtxFLxQ4Cj8FeQFvH7NZWCahYows</span>
+            </li>
+            <li class="task">
+                <span class="task-title">Free Token Task!</span>
+                <span class="innerText">GbumTdsj7hcPZKGBEtxFLxQ4Cj123123H7NZWCahYows</span>
+            </li>
+            <li class="task">
+                <span class="task-title">Free Token Task!</span>
+                <span class="innerText">GbumTdsj7hcPZKGBEtxFLxQ4Cj8FeQFvH7NZWCahYows</span>
+            </li>
+            <!-- Repeat the list item for each task -->
+        </ul>
+    </aside>
+    
+    
+    
+    
+
+
+
+
+
+
+   
+
+    <script src="src/script.js"></script>
+</body>
+</html>
